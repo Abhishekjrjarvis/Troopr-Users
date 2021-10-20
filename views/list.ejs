@@ -1,0 +1,11 @@
+<% layout('./layout/boilerplate') %>
+<div class="container">
+    <div class="list">
+        <h2 class="text-center" style="color: white;">Editable List </h2>
+        <ul>
+            <% for(let a of arr) {%> 
+                <a class="text-white" href="/user/<%= a._id %> "><li><%= a.name %></li></a>
+            <% } %> 
+        </ul>
+    </div>
+</div> 

@@ -1,0 +1,23 @@
+<% layout('./layout/boilerplate') %>
+<h2 class="text-center">All Users</h2>
+<div class="container">
+    <div class="row">
+    <% for(let u of user) {%>
+        <div class="col-4 py-5">
+            <div class="card mb-5 py-5 text-center bg-dark inner-card ">
+                <a class="inner-link" href="/user/<%= u._id  %> ">
+                    <h2 class="text-muted"><%= u.name.toUpperCase() %></h2>
+                </a>
+                <span class="mx-5" style="float: left;">
+                    <a href="/user/<%= u._id %>/edit" class="btn btn-outline-info btn-sm card-link">Edit</a>
+                </span>
+                    <form action="/user/<%= u._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-outline-danger btn-sm ml-auto card-link">Delete</button>
+                    </form>
+            </div>
+        </div>
+    <% } %> 
+</div>
+</div>
+
+

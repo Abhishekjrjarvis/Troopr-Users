@@ -1,0 +1,16 @@
+<% layout('./layout/boilerplate') %> 
+
+  <div class="inner-show ">
+    <div class="text-center">
+      <div class="card text-white bg-info mb-3 " style="max-width: 18rem;">
+        <div class="card-header"><%= user.name %></div>
+        <div class="card-body">
+          <h5 class="card-title"><%= user.email  %> </h5>
+          <p class="card-text"><%= user.name.slice(0,1).toUpperCase() %>'s Contact number is <%= user.contact %></p>
+          <span><small class="text-white">Age is <%= user.age  %> </small></span>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+

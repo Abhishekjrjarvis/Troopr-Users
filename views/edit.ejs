@@ -1,0 +1,14 @@
+<% layout('./layout/boilerplate') %> 
+    <div class="inner bg-dark">
+        <form action="/user/<%= user._id %>?_method=PUT" class="form-group" method="POST">
+            <label for="username">User Name</label>
+            <input type="text" name="name" class="form-control" id="username" value="<%= user.name %> " required><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" class="form-control" id="email" value="<%= user.email %> " required><br>
+            <label for="contact">Mobile No.</label>
+            <input type="tel" class="form-control" max="10" min="10" maxlength="10" name="contact" id="contact" value="<%= user.contact  %> " required><br>
+            <label for="age">Age</label>
+            <input type="tel" class="form-control" name="age" id="age" value="<%= user.age %> " required><br>
+            <button type="submit" class="btn btn-outline-danger btn-block">Update</button>
+        </form>
+    </div>
